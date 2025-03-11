@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advocacy Training: Finding Your Voice &amp; Making Change</title>
+    <meta name="description" content="Advocacy training session focused on team communication, event preparation, audience adaptation, and persuasive calls to action." />
+
+    <style>
+        :root {
+            --primary-color: #4c6ef5;
+            --secondary-color: #40c057;
+            --accent-color: #fd7e14;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+            --text-color: #212529;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f1f3f5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #228be6);
+            color: #fff;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .date-box {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        
+        .intro-section {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .intro-message {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 1.5rem auto;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .video-selector {
+            margin-top: 1rem;
+        }
+
+        .video-selector button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4c6ef5;
+            color: #fff;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .video-selector button:hover {
+            background-color: #364fc7;
+        }
+
+        /* Responsive video container with 16:9 ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin: 1.5rem auto;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        .assessment-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .assessment-link {
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .assessment-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .assessment-link h3 {
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .assessment-link p {
+            margin-bottom: 1.2rem;
+            color: #495057;
+        }
+        
+        .pre-link {
+            background-color: #e3fafc;
+            border: 2px solid #15aabf;
+        }
+        
+        .post-link {
+            background-color: #ebfbee;
+            border: 2px solid #37b24d;
+        }
+        
+        .button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.9rem;
+        }
+        
+        .pre-button {
+            background-color: #15aabf;
+            color: #fff;
+        }
+        
+        .pre-button:hover {
+            background-color: #1098ad;
+            box-shadow: 0 4px 8px rgba(21, 170, 191, 0.3);
+        }
+        
+        .post-button {
+            background-color: #37b24d;
+            color: #fff;
+        }
+        
+        .post-button:hover {
+            background-color: #2f9e44;
+            box-shadow: 0 4px 8px rgba(55, 178, 77, 0.3);
+        }
+        
+        .learning-section {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .learning-objectives {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0 1.5rem 0;
+        }
+        
+        .objective-card {
+            flex: 1;
+            min-width: 200px;
+            background-color: var(--light-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .objective-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .objective-card p {
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        
+        .session-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .session-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .session-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .session-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .session-card h3 .time {
+            font-size: 0.8rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 20px;
+            background-color: var(--accent-color);
+            color: #fff;
+            font-weight: normal;
+        }
+        
+        .session-card ul {
+            padding-left: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        
+        .session-card li {
+            margin-bottom: 0.5rem;
+            color: #495057;
+        }
+        
+        .session-card p {
+            margin-bottom: 1rem;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        
+        .expand-icon {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background-color: var(--primary-color);
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        
+        .detailed-content {
+            display: none;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            border-top: 3px solid var(--primary-color);
+        }
+        
+        .detailed-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .definition-box {
+            background-color: #e7f5ff;
+            border-left: 4px solid #4dabf7;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .definition-box h4 {
+            color: #1864ab;
+            margin-bottom: 0.5rem;
+        }
+        
+        .discussion-box {
+            background-color: #fff9db;
+            border-left: 4px solid #fcc419;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .discussion-box h4 {
+            color: #e67700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .discussion-box ul {
+            padding-left: 1.2rem;
+        }
+        
+        .discussion-box li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .activity-box {
+            background-color: #f3f0ff;
+            border-left: 4px solid #7950f2;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .activity-box h4 {
+            color: #6741d9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .activity-box p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .feedback-box {
+            background-color: #ebfbee;
+            border-left: 4px solid #40c057;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feedback-box h4 {
+            color: #2b8a3e;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feedback-box ul {
+            padding-left: 1.2rem;
+        }
+        
+        .feedback-box li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--dark-color);
+            color: #fff;
+            border-radius: 15px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                padding: 1.5rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .learning-objectives {
+                flex-direction: column;
+            }
+            
+            .assessment-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .assessment-link {
+                width: 100%;
+            }
+            
+            .session-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Finding Your Voice &amp; Making Change</h1>
+            <h2>Advocacy Training: Team Communication &amp; Event Preparation</h2>
+            <p>A 2-hour interactive session to advance your advocacy skills</p>
+            <div class="date-box">Tuesday, March 11, 2025</div>
+        </header>
+        
+        <section class="intro-section">
+            <div class="intro-message">
+                <p>Welcome to our second advocacy training session! Today we'll build on the persuasive messaging skills you developed last week. We'll focus on team-based advocacy, adapting to different audiences, and preparing for our upcoming showcase event on March 20th.</p>
+            </div>
+            
+            <p>Select a video to watch:</p>
+            <div class="video-selector">
+                <button onclick="changeVideo('https://www.youtube.com/embed/o8dzxh7Ybqw')">Video 1</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/bC4kQ2-kHZE')">Video 2</button>
+                <button onclick="changeVideo('https://www.youtube.com/embed/P1PbQlVMp98')">Video 3</button>
+            </div>
+            
+            <div class="video-container">
+                <iframe id="videoFrame" src="https://www.youtube.com/embed/o8dzxh7Ybqw" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="assessment-links">
+                <div class="assessment-link pre-link">
+                    <h3>Before We Begin</h3>
+                    <p>Please take a moment to complete this quick pre-session questionnaire to help us understand your current confidence level.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU3pBdHQHDG1rvh0zcCq87uAqCocpLMw80e3WXB9h_uwkHQQ/viewform?usp=dialog" 
+                       target="_blank" 
+                       class="button pre-button">
+                       Take Pre-Assessment
+                    </a>
+                </div>
+                
+                <div class="assessment-link post-link">
+                    <h3>After Training</h3>
+                    <p>After completing today's session, please fill out this questionnaire to reflect on what you've learned.</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScYPXbL-MouVEcqzqx0d5_IND_0G_zWOXW0I9oeoLti8IE7_Q/viewform?usp=dialog" 
+                       target="_blank" 
+                       class="button post-button">
+                       Take Post-Assessment
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="learning-section">
+            <h2 class="section-title">What You'll Learn Today</h2>
+            
+            <div class="learning-objectives">
+                <div class="objective-card">
+                    <h3>Team Communication Strategies</h3>
+                    <p>Develop techniques for coordinated advocacy messaging across team members for maximum impact.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <h3>Audience Adaptation Skills</h3>
+                    <p>Learn to quickly adjust your approach and messaging for different stakeholder types.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <h3>Compelling Calls to Action</h3>
+                    <p>Create and deliver concise, powerful calls to action that motivate your audience to respond.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <h3>Contingency Planning</h3>
+                    <p>Develop backup strategies for handling unexpected challenges during advocacy presentations.</p>
+                </div>
+                
+                <div class="objective-card">
+                    <h3>Showcase Event Preparation</h3>
+                    <p>Practice the specific skills needed for our March 20th Youth Advocacy Showcase event.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="learning-section">
+            <h2 class="section-title">Session Highlights</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: #495057;">Click on any session card to see detailed information about that section</p>
+            
+            <div class="session-grid">
+                <!-- 1. Team Communication Workshop -->
+                <div class="session-card" onclick="toggleSection('team-communication')" aria-expanded="false">
+                    <h3>1. Team Communication Workshop <span class="time">25 min</span></h3>
+                    <p>Strong teams communicate with consistency and clarity. You'll practice:</p>
+                    <ul>
+                        <li>Coordinating advocacy messages across team members</li>
+                        <li>Smooth transitions between different speakers</li>
+                        <li>Maintaining message consistency while showcasing individual strengths</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="team-communication" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Key Terms</h4>
+                            <p><strong>Consensus Building:</strong> Finding a solution acceptable to all team members.</p>
+                            <p><strong>Active Listening:</strong> Fully concentrating on what others are saying, rather than just hearing.</p>
+                            <p><strong>Message Consistency:</strong> Maintaining aligned messaging across team members.</p>
+                            <p><strong>Role Clarity:</strong> Understanding each team member's contributions and responsibilities.</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Discussion Points</h4>
+                            <ul>
+                                <li>How does team communication strengthen advocacy efforts?</li>
+                                <li>What challenges arise when coordinating advocacy messages across a team?</li>
+                                <li>How can you maintain your authentic voice while aligning with team messaging?</li>
+                                <li>What communication techniques help teams appear coordinated during presentations?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Activity: Communication Circuit</h4>
+                            <p>You'll work in small teams of 3-4 members:</p>
+                            <ol>
+                                <li>Each team receives a specific advocacy scenario.</li>
+                                <li>Develop a coordinated response that allows each member to contribute.</li>
+                                <li>Assign different roles to each team member, such as:
+                                    <ul>
+                                        <li>Main presenter (introduces the issue and main points)</li>
+                                        <li>Data specialist (shares key statistics or evidence)</li>
+                                        <li>Personal story sharer (provides a human connection)</li>
+                                        <li>Call-to-action leader (explains what the audience should do)</li>
+                                    </ul>
+                                </li>
+                                <li>Practice smooth transitions between speakers.</li>
+                                <li>Present your coordinated message to another team for feedback.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Reflection Questions</h4>
+                            <ul>
+                                <li>What was most challenging about coordinating your team's message?</li>
+                                <li>How did having different roles strengthen your presentation?</li>
+                                <li>Which techniques helped create smooth transitions between speakers?</li>
+                                <li>How might you apply these team communication strategies on March 20?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. Scenario-Based Role Play -->
+                <div class="session-card" onclick="toggleSection('scenario-role-play')" aria-expanded="false">
+                    <h3>2. Scenario-Based Role Play <span class="time">30 min</span></h3>
+                    <p>Different audiences require different approaches. You'll practice:</p>
+                    <ul>
+                        <li>Adapting your message for various audience types</li>
+                        <li>Identifying audience cues that suggest how to adjust your approach</li>
+                        <li>Maintaining your core message while shifting your delivery style</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="scenario-role-play" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Key Terms</h4>
+                            <p><strong>Audience Adaptation:</strong> Tailoring your approach based on who you're speaking to.</p>
+                            <p><strong>Message Framing:</strong> Presenting information in ways that resonate with specific values.</p>
+                            <p><strong>Objection Handling:</strong> Responding constructively to concerns or opposition.</p>
+                            <p><strong>Improvisation:</strong> Adapting your communication in the moment based on audience response.</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Discussion Points</h4>
+                            <ul>
+                                <li>What cues help you identify how to adapt your message?</li>
+                                <li>How do you maintain your core message while adapting to different audiences?</li>
+                                <li>Which audience types do you find most challenging to communicate with?</li>
+                                <li>How can you prepare for different audience responses while staying authentic?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Activity: Audience Adaptation Challenge</h4>
+                            <p>You'll work in pairs to practice adapting messages for different audiences:</p>
+                            <ol>
+                                <li>Each pair receives a basic advocacy message.</li>
+                                <li>You'll also receive a series of audience cards describing different types of people (e.g., skeptical administrator, curious student, busy community member, supportive but uninformed parent).</li>
+                                <li>Take turns adapting your message for each audience type.</li>
+                                <li>Your partner provides feedback on your adaptation effectiveness.</li>
+                                <li>Volunteers demonstrate successful adaptations for the whole group.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Reflection Questions</h4>
+                            <ul>
+                                <li>Which audience type was most challenging to adapt for? Why?</li>
+                                <li>What specific language changes did you make for different audiences?</li>
+                                <li>How did your body language and delivery style change across audiences?</li>
+                                <li>Which adaptations seemed most effective based on group demonstrations?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. Call to Action Practice -->
+                <div class="session-card" onclick="toggleSection('call-to-action')" aria-expanded="false">
+                    <h3>3. Call to Action Practice <span class="time">20 min</span></h3>
+                    <p>Effective advocacy ends with a clear request for action. You'll develop:</p>
+                    <ul>
+                        <li>Concise, powerful 30-second calls to action</li>
+                        <li>Techniques for delivering with confidence and conviction</li>
+                        <li>Methods for making your request specific and achievable</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="call-to-action" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Key Terms</h4>
+                            <p><strong>Call to Action:</strong> A specific request for your audience to take a defined step.</p>
+                            <p><strong>Conviction:</strong> Communicating with belief and passion about your message.</p>
+                            <p><strong>Conciseness:</strong> Expressing ideas clearly in a brief format without unnecessary words.</p>
+                            <p><strong>Compelling Delivery:</strong> Using voice, pacing, and emphasis to enhance your message impact.</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Discussion Points</h4>
+                            <ul>
+                                <li>What makes a call to action compelling versus forgettable?</li>
+                                <li>How specific should a call to action be?</li>
+                                <li>What techniques help you deliver with confidence under time pressure?</li>
+                                <li>How do emotional appeals connect to effective calls to action?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Activity: 30-Second Call to Action</h4>
+                            <p>You'll create and practice a brief, powerful call to action:</p>
+                            <ol>
+                                <li>Craft a 30-second call to action related to your advocacy issue.</li>
+                                <li>Include these elements:
+                                    <ul>
+                                        <li>A clear, specific request</li>
+                                        <li>A compelling reason why the action matters</li>
+                                        <li>A sense of urgency or timeline</li>
+                                    </ul>
+                                </li>
+                                <li>Practice in small groups with peer feedback.</li>
+                                <li>Focus on clarity, confidence, and persuasive delivery.</li>
+                                <li>Volunteers demonstrate for the whole group.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Reflection Questions</h4>
+                            <ul>
+                                <li>What was most challenging about creating a concise call to action?</li>
+                                <li>How did your delivery change after receiving feedback?</li>
+                                <li>Which calls to action from other participants did you find most compelling? Why?</li>
+                                <li>How will you incorporate what you learned into your March 20 presentation?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 4. Risk Assessment & Contingency Planning -->
+                <div class="session-card" onclick="toggleSection('risk-assessment')" aria-expanded="false">
+                    <h3>4. Risk Assessment &amp; Contingency Planning <span class="time">25 min</span></h3>
+                    <p>Being prepared helps you advocate effectively:</p>
+                    <ul>
+                        <li>Identifying potential challenges for the March 20 event</li>
+                        <li>Developing backup plans for various scenarios</li>
+                        <li>Building team support systems for unexpected situations</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="risk-assessment" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Key Terms</h4>
+                            <p><strong>Risk Assessment:</strong> Identifying potential problems and their likelihood.</p>
+                            <p><strong>Contingency Planning:</strong> Developing backup strategies for potential challenges.</p>
+                            <p><strong>Adaptive Response:</strong> Adjusting quickly and effectively to unexpected situations.</p>
+                            <p><strong>Team Support Systems:</strong> Ways team members can assist each other during challenges.</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Discussion Points</h4>
+                            <ul>
+                                <li>How does preparing for challenges reduce anxiety?</li>
+                                <li>What’s the difference between helpful contingency planning and unhelpful worry?</li>
+                                <li>How can team members support each other during unexpected challenges?</li>
+                                <li>What are the most common challenges in advocacy presentations?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Activity: "What If?" Scenario Planning</h4>
+                            <p>Your team will prepare for potential challenges on March 20:</p>
+                            <ol>
+                                <li>Each team brainstorms potential challenges that might arise.</li>
+                                <li>You'll also receive "What If?" scenario cards with additional challenges (e.g., tech failure, unexpected resistance, tough questions, attendance fluctuations).</li>
+                                <li>Develop specific contingency plans for each scenario.</li>
+                                <li>Share your most creative and effective solutions with the group.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Reflection Questions</h4>
+                            <ul>
+                                <li>Which potential challenge concerns you most about March 20?</li>
+                                <li>What contingency plans make you feel most prepared?</li>
+                                <li>How can you support teammates who might struggle in certain scenarios?</li>
+                                <li>What’s one strategy you’ll definitely use if challenges arise on March 20?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. Mock Presentation Practice -->
+                <div class="session-card" onclick="toggleSection('mock-presentation')" aria-expanded="false">
+                    <h3>5. Mock Presentation Practice <span class="time">30 min</span></h3>
+                    <p>Practice makes perfect! You'll rehearse for the March 20 event:</p>
+                    <ul>
+                        <li>Setting up and arranging a presentation table</li>
+                        <li>Greeting attendees and starting conversations</li>
+                        <li>Handling questions and collecting feedback</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="mock-presentation" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Key Presentation Elements</h4>
+                            <p><strong>Table Setup:</strong> Organizing your advocacy materials for maximum visual impact.</p>
+                            <p><strong>Visitor Engagement:</strong> Techniques for initiating conversations with attendees.</p>
+                            <p><strong>Question Handling:</strong> Methods for addressing inquiries confidently and accurately.</p>
+                            <p><strong>Feedback Collection:</strong> Ways to gather input and measure your effectiveness.</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Discussion Points</h4>
+                            <ul>
+                                <li>What makes a presentation table visually appealing and organized?</li>
+                                <li>How do you engage someone who seems hesitant to approach your table?</li>
+                                <li>What techniques help you transition from small talk to your advocacy message?</li>
+                                <li>How do you balance prepared remarks with spontaneous conversation?</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Activity: Event Simulation</h4>
+                            <p>You'll practice in a realistic event environment:</p>
+                            <ol>
+                                <li>Teams take turns setting up a sample presentation station.</li>
+                                <li>Practice these key skills:
+                                    <ul>
+                                        <li>Table setup and materials arrangement</li>
+                                        <li>Professional greeting and introduction</li>
+                                        <li>Delivering key talking points</li>
+                                        <li>Handling Q&amp;A from "visitors"</li>
+                                        <li>Collecting feedback or commitments</li>
+                                    </ul>
+                                </li>
+                                <li>Other participants play the role of event attendees.</li>
+                                <li>Observers provide constructive feedback.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Reflection Questions</h4>
+                            <ul>
+                                <li>What aspects of the presentation felt most natural to you?</li>
+                                <li>Which parts were most challenging?</li>
+                                <li>Which feedback was most helpful?</li>
+                                <li>What will you do differently at the actual March 20 event?</li>
+                                <li>What additional materials or preparation do you need?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 6. Final Event Preparation -->
+                <div class="session-card" onclick="toggleSection('final-prep')" aria-expanded="false">
+                    <h3>6. Final Event Preparation <span class="time">15 min</span></h3>
+                    <p>Get ready for the March 20 Youth Advocacy Showcase:</p>
+                    <ul>
+                        <li>Understanding the event schedule and logistics</li>
+                        <li>Clarifying team roles and responsibilities</li>
+                        <li>Creating a preparation checklist for next week</li>
+                    </ul>
+                    <div class="expand-icon">+</div>
+                    
+                    <div id="final-prep" class="detailed-content">
+                        <div class="definition-box">
+                            <h4>Event Information</h4>
+                            <p><strong>Youth Advocacy Showcase:</strong> A 2-hour event where you'll present your advocacy issues in an interactive format.</p>
+                            <p><strong>Date &amp; Time:</strong> Wednesday, March 20, 2025</p>
+                            <p><strong>Setup Time:</strong> 3:00-3:30 PM (arrive 30 minutes early)</p>
+                        </div>
+                        
+                        <div class="discussion-box">
+                            <h4>Event Schedule</h4>
+                            <ul>
+                                <li><strong>3:00-3:30 PM:</strong> Team arrival and station setup</li>
+                                <li><strong>3:30-3:45 PM:</strong> Welcome and introduction</li>
+                                <li><strong>3:45-4:45 PM:</strong> Advocacy showcase (visitors rotate between stations)</li>
+                                <li><strong>4:45-5:15 PM:</strong> Featured team presentations (3-4 selected teams)</li>
+                                <li><strong>5:15-5:30 PM:</strong> Celebration and certificate distribution</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="activity-box">
+                            <h4>Preparation Assignment for March 20</h4>
+                            <p>Before our event, please complete these tasks:</p>
+                            <ol>
+                                <li><strong>Finalize your team's 5-minute advocacy presentation.</strong></li>
+                                <li><strong>Prepare all visual aids and materials</strong> for your table display.</li>
+                                <li><strong>Create a one-page handout</strong> summarizing your advocacy issue.</li>
+                                <li><strong>Develop 5-7 talking points</strong> for engaging with attendees.</li>
+                                <li><strong>Practice your presentation</strong> at least 3 times with your team.</li>
+                            </ol>
+                            <p>Your presentation should include:</p>
+                            <ul>
+                                <li>A clear explanation of your advocacy issue</li>
+                                <li>Evidence or data supporting your position</li>
+                                <li>A personal connection or story</li>
+                                <li>A specific, actionable call to action</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feedback-box">
+                            <h4>Success Tips</h4>
+                            <ul>
+                                <li>Arrive 30 minutes early to set up your station properly</li>
+                                <li>Dress professionally to make a strong impression</li>
+                                <li>Bring water and snacks to stay energized</li>
+                                <li>Practice answering a variety of questions</li>
+                                <li>Support your teammates during challenges</li>
+                                <li>Remember to collect feedback from visitors</li>
+                                <li>Most importantly: be confident in your preparation!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>© 2025 Club Stride Social Impact Program | March 11, 2025 | Remember to complete both pre and post assessments!</p>
+        </footer>
+    </div>
+    
+    <script>
+        function toggleSection(sectionId) {
+            const contentElement = document.getElementById(sectionId);
+            const parentCard = contentElement.closest('.session-card');
+            const expandIcon = parentCard.querySelector('.expand-icon');
+            
+            if (contentElement.classList.contains('active')) {
+                contentElement.classList.remove('active');
+                parentCard.setAttribute('aria-expanded', 'false');
+                expandIcon.textContent = '+';
+            } else {
+                contentElement.classList.add('active');
+                parentCard.setAttribute('aria-expanded', 'true');
+                expandIcon.textContent = '−';
+            }
+        }
+
+        // Video switching functionality
+        function changeVideo(url) {
+            document.getElementById('videoFrame').src = url;
+        }
+    </script>
+</body>
+</html>
